@@ -23,4 +23,4 @@ int denominations[] = {2000, 500, 100, 50, 20, 10, 5, 1};
 int denominations_count = sizeof(denominations) / sizeof(*denominations);
 
 unsigned int get_money(unsigned short int);
-int print_denominations(unsigned int);
+int display_notes(unsigned int);

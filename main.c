@@ -8,7 +8,7 @@ int main(void)
   {
     unsigned int notes = get_money(amounts[i]);
     printf("Amount: Rs. %u\n", amounts[i]);
-    print_denominations(notes);
+    display_notes(notes);
   }
 
   return 0;

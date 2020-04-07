@@ -19,8 +19,8 @@ unsigned int get_money(unsigned short int money)
   return note_count;
 }
 
-int print_denominations(unsigned int notes);
-int print_denominations(unsigned int notes)
+int display_notes(unsigned int notes);
+int display_notes(unsigned int notes)
 {
   unsigned int divisor = 0x10000000;
   for (int index = 0; index < denominations_count; index++)
