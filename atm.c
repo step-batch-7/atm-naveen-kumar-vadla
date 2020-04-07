@@ -19,3 +19,22 @@ unsigned int get_money(unsigned short int money)
 
   return note_count;
 }
+
+int print_denominations(unsigned short int money);
+int print_denominations(unsigned short int money)
+{
+  unsigned int notes = get_money(money);
+  printf("Amount: Rs. %u\n", money);
+
+  int denominations[] = {2000, 500, 100, 50, 20, 10, 5, 1};
+  unsigned int divisor = 0x10000000;
+  for (int index = 0; index < sizeof(denominations) / sizeof(*denominations); index++)
+  {
+    int note_count = notes / divisor;
+    note_count &&printf("%2d %s of Rs. %d\n", note_count, note_count > 1 ? "notes" : "note", denominations[index]);
+    notes = notes % divisor;
+    divisor = divisor >> 4;
+  }
+  printf("\n");
+  return 0;
+}
