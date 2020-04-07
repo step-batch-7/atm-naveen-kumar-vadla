@@ -18,5 +18,9 @@
    2590 0x11012000
   31999 0xf3412014
 */
+
+int denominations[] = {2000, 500, 100, 50, 20, 10, 5, 1};
+int denominations_count = sizeof(denominations) / sizeof(*denominations);
+
 unsigned int get_money(unsigned short int);
-int print_denominations(unsigned short int);
+int print_denominations(unsigned int);
