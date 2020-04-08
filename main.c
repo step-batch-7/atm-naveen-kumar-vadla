@@ -10,9 +10,8 @@ int display_notes(unsigned int notes)
   for (int index = 0; index < denominations_count; index++)
   {
     int note_count = notes / divisor;
+    notes = notes << 4;
     note_count &&printf("%2d %s of Rs. %d\n", note_count, note_count > 1 ? "notes" : "note ", denominations[index]);
-    notes = notes % divisor;
-    divisor = divisor >> 4;
   }
   printf("\n");
   return 0;
