@@ -10,12 +10,11 @@ count get_money(cash money)
   {
     return note_count;
   }
-
-  for (int index = 0; index < ARRAY_SIZE(denominations); index++)
+  FOR_LOOP(0, ARRAY_SIZE(denominations))
   {
     note_count = note_count << 4;
-    note_count = note_count + (remaining_balance / denominations[index]);
-    remaining_balance = remaining_balance % denominations[index];
+    note_count = note_count + (remaining_balance / denominations[i]);
+    remaining_balance = remaining_balance % denominations[i];
   }
 
   return note_count;
