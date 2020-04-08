@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include "atm.h"
 
-int display_notes(unsigned int notes);
-int display_notes(unsigned int notes)
+int display_notes(count notes);
+int display_notes(count notes)
 {
-  unsigned int divisor = 0x10000000;
+  count divisor = 0x10000000;
   int denominations[] = DENOMINATIONS_LIST;
   for (int index = 0; index < ARRAY_SIZE(denominations); index++)
   {
@@ -18,10 +18,10 @@ int display_notes(unsigned int notes)
 
 int main(void)
 {
-  unsigned short int amounts[] = {1, 10, 39, 589, 2590, 31999};
+  cash amounts[] = {1, 10, 39, 589, 2590, 31999};
   for (int i = 0; i < ARRAY_SIZE(amounts); i++)
   {
-    unsigned int notes = get_money(amounts[i]);
+    count notes = get_money(amounts[i]);
     printf("Amount: Rs. %u\n", amounts[i]);
     display_notes(notes);
   }
