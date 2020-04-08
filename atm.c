@@ -2,7 +2,7 @@
 
 unsigned int get_money(unsigned short int money)
 {
-  int denominations[] = {2000, 500, 100, 50, 20, 10, 5, 1};
+  int denominations[] = DENOMINATIONS_LIST;
 
   unsigned int note_count = 0x00000000;
   unsigned short int remaining_balance = money;

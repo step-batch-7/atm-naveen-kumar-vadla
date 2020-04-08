@@ -21,5 +21,6 @@
 
 #define LIMIT 31999
 #define ARRAY_SIZE(array) (sizeof(array) / sizeof(*array))
+#define DENOMINATIONS_LIST {2000, 500, 100, 50, 20, 10, 5, 1}
 
 unsigned int get_money(unsigned short int);

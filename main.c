@@ -5,7 +5,7 @@ int display_notes(unsigned int notes);
 int display_notes(unsigned int notes)
 {
   unsigned int divisor = 0x10000000;
-  int denominations[] = {2000, 500, 100, 50, 20, 10, 5, 1};
+  int denominations[] = DENOMINATIONS_LIST;
   for (int index = 0; index < ARRAY_SIZE(denominations); index++)
   {
     int note_count = notes / divisor;
