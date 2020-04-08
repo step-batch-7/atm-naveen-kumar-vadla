@@ -26,5 +26,6 @@
 
 typedef unsigned short int cash;
 typedef unsigned int count;
+typedef int currency[];
 
 count get_money(cash);

@@ -2,7 +2,7 @@
 
 count get_money(cash money)
 {
-  int denominations[] = DENOMINATIONS_LIST;
+  currency denominations = DENOMINATIONS_LIST;
   count note_count = 0x00000000;
   cash remaining_balance = money;
 
