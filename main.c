@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include "atm.h"
 
-int display_notes(count notes);
-int display_notes(count notes)
+void display_notes(count notes);
+void display_notes(count notes)
 {
   count divisor = 0x10000000;
   int denominations[] = DENOMINATIONS_LIST;
@@ -13,7 +13,6 @@ int display_notes(count notes)
     note_count &&printf("%2d %s of Rs. %d\n", note_count, note_count > 1 ? "notes" : "note ", denominations[index]);
   }
   printf("\n");
-  return 0;
 }
 
 int main(void)
