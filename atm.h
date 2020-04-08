@@ -19,4 +19,7 @@
   31999 0xf3412014
 */
 
+#define LIMIT 31999
+#define ARRAY_SIZE(array) (sizeof(array) / sizeof(*array))
+
 unsigned int get_money(unsigned short int);
